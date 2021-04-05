@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_verification_message"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_margin_lg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginBottom="@dimen/activity_margin_lg"
+        android:gravity="center"
+        android:textColor="@color/black_87"
+        android:text="@string/wish_verify_code_title"
+        android:fontFamily="@font/open_sans_semibold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black_87"
+        android:text="@string/wish_verify_code_message_2"
+        android:fontFamily="@font/open_sans"/>
+
+    <include layout="@layout/generic_dialog_section_buttons"/>
+
+</LinearLayout>

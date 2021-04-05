@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/about_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        android:layout_marginEnd="@dimen/activity_margin_lg"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:fontFamily="@font/open_sans_bold"
+        android:textStyle="italic"
+        android:textColor="@color/black_54"
+        android:textSize="18sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        tools:text="note defined yet"
+        android:includeFontPadding="false"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:textColor="@color/black_87"
+        android:textSize="20sp"
+        android:includeFontPadding="false"
+        tools:text="Joanne Smith"/>
+
+    <TextView
+        android:id="@+id/invite_to_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="20sp"
+        android:text="@string/invite_to_inner_circle"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/hearts_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/hearts_total_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:srcCompat="@drawable/ic_full_heart_orange"/>
+
+            <TextView
+                android:id="@+id/count_heart_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-1dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:textSize="18sp"
+                tools:text="3564"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hearts_avail_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:srcCompat="@drawable/ic_remaining_hearts_orange"/>
+
+            <TextView
+                android:id="@+id/count_heart_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-1dp"
+                android:fontFamily="@font/open_sans_bold"
+                android:textSize="18sp"
+                android:includeFontPadding="false"
+                tools:text="3564"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

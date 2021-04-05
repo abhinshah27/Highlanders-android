@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="@dimen/activity_margin"
+                android:paddingEnd="@dimen/activity_margin"
+                android:background="@color/transparent"
+                android:gravity="center_vertical">
+
+    <include layout="@layout/custom_layout_profile_picture"
+             android:id="@+id/user_profile_pic"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:id="@+id/rating_hearts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|start"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/rating_h1"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_heart_orange"/>
+
+        <ImageView
+            android:id="@+id/rating_h2"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_heart_orange"/>
+
+        <ImageView
+            android:id="@+id/rating_h3"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_heart_orange"/>
+
+        <ImageView
+            android:id="@+id/rating_h4"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_heart_orange"/>
+
+        <ImageView
+            android:id="@+id/rating_h5"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:srcCompat="@drawable/ic_heart_orange"/>
+
+    </LinearLayout>
+    <!--<RatingBar
+        android:id="@+id/rating_hearts"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical|end"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressDrawable="@drawable/custom_rating_hearts_transp"
+        android:stepSize="1"/>-->
+
+    <TextView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/user_profile_pic"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/activity_margin"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_toEndOf="@id/user_profile_pic"
+        android:layout_toStartOf="@id/rating_hearts"
+        android:ellipsize="end"
+        android:fontFamily="@font/open_sans_semibold"
+        android:lines="1"
+        android:textColor="@color/black_87"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="username"
+        />
+
+</RelativeLayout>

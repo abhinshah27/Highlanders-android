@@ -1,0 +1,19 @@
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<resources>
+    <string name="app_name" translatable="false">Highlanders-DEV</string>
+    <string name="google_maps_key" translatable="false">AIzaSyAZrJ2vCumju3l2FE-mjShW3AyAg9ddNAk</string>
+
+    <string name="notif_channel_default">highlanders_dev_default</string>
+    <string name="notif_channel_default_description">Highlanders-DEV default notification channel</string>
+    <string name="notif_channel_chat_unsent">highlanders_dev_chat_unsent_messages</string>
+    <string name="notif_channel_chat_unsent_description">Highlanders-DEV notification channel for info notification about chat unsent messages</string>
+    <string name="notif_channel_chat">highlanders_dev_chat</string>
+    <string name="notif_channel_chat_description">Highlanders-DEV notification channel for incoming messages</string>
+    <string name="notif_channel_calls">highlanders_dev_calls</string>
+    <string name="notif_channel_calls_description">Highlanders-DEV notification channel for incoming and outgoing calls</string>
+</resources>

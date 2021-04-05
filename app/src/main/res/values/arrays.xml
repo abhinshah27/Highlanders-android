@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<resources>
+
+    <!-- PROFILE -->
+    <string-array name="relationship_statuses">
+        <item>@string/relationship_single</item>
+        <item>@string/relationship_married</item>
+        <item>@string/relationship_in_a_rel</item>
+        <item>@string/relationship_widower</item>
+        <item>@string/relationship_widow</item>
+    </string-array>
+
+    <string name="relationship_single">Single</string>
+    <string name="relationship_in_a_rel">In a Relationship</string>
+    <string name="relationship_married">Married</string>
+    <string name="relationship_widower">Widower</string>
+    <string name="relationship_widow">Widow</string>
+
+
+    <!-- WISHES -->
+    <string-array name="repetitions_picker_data">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+        <item>91</item>
+        <item>92</item>
+        <item>93</item>
+        <item>94</item>
+        <item>95</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
+        <item>Infinite</item>
+    </string-array>
+
+
+    <string-array name="picker_time_hour_24">
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+    </string-array>
+
+    <string-array name="picker_time_hour_12">
+        <item>12</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+
+    <string-array name="picker_time_minute">
+        <item>00</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+    </string-array>
+
+    <string-array name="picker_time_am_pm">
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+
+
+    <!-- SETTINGS -->
+    <string-array name="settings_main_entries">
+        <item>@string/settings_main_account</item>
+        <item>@string/settings_main_inner_circle</item>
+        <item>@string/settings_main_lists</item>
+        <item>@string/settings_main_privacy</item>
+        <item>@string/settings_main_security</item>
+        <item>@string/settings_main_help</item>
+    </string-array>
+    <!--<item>@string/settings_main_payment</item>-->
+
+    <string name="settings_main_account">Account Settings</string>
+    <string name="settings_main_inner_circle">Inner Circle Settings</string>
+    <string name="settings_main_lists">Folders</string>
+    <string name="settings_main_privacy">Privacy</string>
+    <string name="settings_main_security">Security</string>
+    <string name="settings_main_payment">Payment</string>
+    <string name="settings_main_help">Help &amp; Support</string>
+
+    <string-array name="settings_inner_circle">
+        <item>@string/settings_ic_circles</item>
+        <item>@string/settings_ic_feed</item>
+        <item>@string/settings_ic_legacy_to</item>
+    </string-array>
+    <string name="settings_ic_circles">My Circles</string>
+    <string name="settings_ic_feed">Timeline Feed Preferences</string>
+    <string name="settings_ic_legacy_to">You are Legacy Contact to</string>
+
+    <string-array name="settings_inner_circle_feed">
+        <item>@string/settings_ic_feed_sort</item>
+        <item>@string/settings_ic_feed_autoplay</item>
+    </string-array>
+    <string name="settings_ic_feed_sort">Default Sort Order</string>
+    <string name="settings_ic_feed_autoplay">Auto-play Video</string>
+
+
+    <string-array name="settings_ic_feed_sort">
+        <item>@string/settings_ic_sort_recent</item>
+        <item>@string/settings_ic_sort_loved</item>
+        <item>@string/settings_ic_sort_shuffle</item>
+    </string-array>
+    <string name="settings_ic_sort_recent">Most Recent</string>
+    <string name="settings_ic_sort_loved">Most Loved</string>
+    <string name="settings_ic_sort_shuffle">Shuffle</string>
+
+    <integer-array name="settings_ic_feed_sort_values">
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+    </integer-array>
+
+
+    <string-array name="settings_ic_feed_autoplay">
+        <item>@string/settings_ic_feed_ap_both</item>
+        <item>@string/settings_ic_feed_ap_wifi</item>
+        <item>@string/settings_ic_feed_ap_never</item>
+    </string-array>
+    <string name="settings_ic_feed_ap_both">On Mobile Data and Wifi Connections</string>
+    <string name="settings_ic_feed_ap_wifi">On Wifi Connections Only</string>
+    <string name="settings_ic_feed_ap_never">Never Auto-play Videos</string>
+
+    <integer-array name="settings_ic_feed_ap_values">
+        <item>3000</item>
+        <item>3001</item>
+        <item>3002</item>
+    </integer-array>
+
+
+    <string-array name="settings_privacy">
+        <item>@string/settings_privacy_policy</item>
+        <item>@string/settings_privacy_post_visib</item>
+        <item>@string/settings_privacy_include_ic</item>
+        <item>@string/settings_privacy_see_ic</item>
+        <item>@string/settings_privacy_look_up</item>
+        <item>@string/settings_privacy_comment</item>
+        <item>@string/settings_privacy_review_tag</item>
+        <item>@string/settings_privacy_block</item>
+        <item>@string/settings_privacy_chat</item>
+        <item>@string/settings_privacy_voice</item>
+        <item>@string/settings_privacy_video</item>
+    </string-array>
+    <string name="settings_privacy_policy">Privacy Policy</string>
+    <string name="settings_privacy_post_visib">Post Visibility</string>
+    <string name="settings_privacy_include_ic">Who can include me in their Inner Circle</string>
+    <string name="settings_privacy_see_ic">Who can see my Inner Circle</string>
+    <string name="settings_privacy_look_up">Who can look me up</string>
+    <string name="settings_privacy_comment">Who can comment on my posts</string>
+    <string name="settings_privacy_review_tag">Review posts friends tag you in before they appear on your diary</string>
+    <string name="settings_privacy_block">Blocked</string>
+    <string name="settings_privacy_chat">Who can send me direct messages</string>
+    <string name="settings_privacy_voice">Who can voice call me</string>
+    <string name="settings_privacy_video">Who can video call me</string>
+
+    <string-array name="settings_privacy_post_visib">
+        <item>@string/settings_privacy_pv_ic</item>
+        <item>@string/settings_privacy_pv_public</item>
+        <item>@string/settings_privacy_pv_me</item>
+        <item>@string/settings_privacy_pv_sel_circles</item>
+        <item>@string/settings_privacy_pv_sel_users</item>
+    </string-array>
+    <string name="settings_privacy_pv_ic">@string/inner_circle</string>
+    <string name="settings_privacy_pv_public">@string/label_privacy_public</string>
+    <string name="settings_privacy_pv_me">@string/label_privacy_only_me</string>
+    <string name="settings_privacy_pv_sel_users">@string/label_privacy_sel_users</string>
+    <string name="settings_privacy_pv_sel_circles">@string/label_privacy_sel_circles</string>
+
+    <string-array name="settings_privacy_include_ic">
+        <item>@string/label_privacy_everyone</item>
+        <item>@string/label_privacy_no_one</item>
+    </string-array>
+
+    <string-array name="settings_privacy_see_ic">
+        <item>@string/label_privacy_only_me</item>
+        <item>@string/label_privacy_ic_members</item>
+        <item>@string/label_privacy_everyone</item>
+    </string-array>
+
+    <string-array name="settings_privacy_look_up">
+        <item>@string/label_privacy_everyone</item>
+        <item>@string/label_privacy_ic</item>
+    </string-array>
+
+    <string-array name="settings_privacy_comment">
+        <item>@string/label_privacy_ic</item>
+        <item>@string/label_privacy_everyone</item>
+        <item>@string/label_privacy_only_me</item>
+    </string-array>
+
+    <string-array name="settings_privacy_review">
+        <item>@string/action_on</item>
+        <item>@string/action_off</item>
+    </string-array>
+
+    <string-array name="settings_privacy_chat_calls">
+        <item>@string/label_privacy_everyone</item>
+        <item>@string/label_privacy_no_one</item>
+        <item>@string/label_privacy_ic</item>
+    </string-array>
+
+
+    <string-array name="settings_security">
+        <item>@string/settings_security_legacy_trigger</item>
+        <item>@string/settings_security_delete_account</item>
+    </string-array>
+    <string name="settings_security_legacy_trigger">Legacy Contact Trigger</string>
+    <string name="settings_security_delete_account">Delete account</string>
+
+    <string-array name="settings_security_legacy_c_trigger_titles">
+        <item>@string/settings_security_lct_2step_title</item>
+        <item>@string/settings_security_lct_inactivity_title</item>
+        <item>@string/settings_security_lct_paper_title</item>
+    </string-array>
+    <string name="settings_security_lct_2step_title">2-Step Verification</string>
+    <string name="settings_security_lct_inactivity_title">Wait for Inactivity</string>
+    <string name="settings_security_lct_paper_title">Require Paper Certificate</string>
+
+    <string-array name="settings_security_legacy_c_trigger_descr">
+        <item>@string/settings_security_lct_2step_mess</item>
+        <item>@string/settings_security_lct_inactivity_mess</item>
+        <item>@string/settings_security_lct_paper_mess</item>
+    </string-array>
+    <string name="settings_security_lct_2step_mess">You may set additional 2-Step Verification Contacts which will have to confirm you have become Digital Only once your Legacy Contact has notified us that you have departed and you became Digital Only.</string>
+    <string name="settings_security_lct_inactivity_mess">You can set a period of time after which, if we recorded no activity on your Highlanders Account, your Legacy Contact has notified us that you have departed, and it has been confirmed by your 2-Step Verification Contacts (if any), you will become Digital Only.</string>
+    <string name="settings_security_lct_paper_mess">Require Paper Certificate from your Legacy Contact to be sent to admin@highlande.rs in order to verify and confirm that you became Digital Only.</string>
+    <string name="settings_security_lct_paper_mess_email">admin@highlande.rs</string>
+
+    <string-array name="settings_security_lct_inactivity_eras">
+        <item>@string/settings_security_lct_inact_years</item>
+        <item>@string/settings_security_lct_inact_months</item>
+        <item>@string/settings_security_lct_inact_weeks</item>
+        <item>@string/settings_security_lct_inact_days</item>
+        <item>@string/settings_security_lct_inact_hours</item>
+    </string-array>
+    <string name="settings_security_lct_inact_hours">Hours</string>
+    <string name="settings_security_lct_inact_days">Days</string>
+    <string name="settings_security_lct_inact_weeks">Weeks</string>
+    <string name="settings_security_lct_inact_months">Months</string>
+    <string name="settings_security_lct_inact_years">Years</string>
+
+    <integer-array name="settings_security_lct_inactivity_values_years">
+        <item>1</item>
+        <item>10</item>
+    </integer-array>
+
+    <integer-array name="settings_security_lct_inactivity_values_months">
+        <item>1</item>
+        <item>11</item>
+    </integer-array>
+
+    <integer-array name="settings_security_lct_inactivity_values_weeks">
+        <item>1</item>
+        <item>4</item>
+    </integer-array>
+
+    <integer-array name="settings_security_lct_inactivity_values_days">
+        <item>1</item>
+        <item>6</item>
+    </integer-array>
+
+    <integer-array name="settings_security_lct_inactivity_values_hours">
+        <item>1</item>
+        <item>23</item>
+    </integer-array>
+
+
+    <string name="settings_help_user_guide">User Guide</string>
+    <string name="settings_help_contact">Contact</string>
+
+    <string-array name="help_contact_support_titles">
+        <item>@string/help_contact_support_title_not_working</item>
+        <item>@string/help_contact_support_title_access</item>
+        <item>@string/help_contact_support_title_interest</item>
+        <item>@string/help_contact_support_title_feedback</item>
+        <item>@string/help_contact_support_title_else</item>
+    </string-array>
+    <!-- TODO    length == 5 instead of 6 because CONNECT section not available -->
+    <!--<item>@string/help_contact_support_title_connect</item>-->
+
+    <string name="help_contact_support_title_not_working">My app isn\'t working as expected</string>
+    <string name="help_contact_support_title_access">I can\'t access my account</string>
+    <string name="help_contact_support_title_connect">I\'m unable to connect an external service in Settings > Connected accounts</string>
+    <string name="help_contact_support_title_interest">I can\'t find an Interest Page</string>
+    <string name="help_contact_support_title_feedback">I have feedback or a feature request</string>
+    <string name="help_contact_support_title_else">Something else…</string>
+
+    <string-array name="help_contact_support_descriptions">
+        <item>@string/help_contact_support_descr_not_working</item>
+        <item>@string/help_contact_support_descr_access</item>
+        <item>@string/help_contact_support_descr_interest</item>
+        <item>@string/help_contact_support_descr_feedback</item>
+        <item>@string/help_contact_support_descr_else</item>
+    </string-array>
+    <!-- TODO    length == 5 instead of 6 because CONNECT section not available -->
+    <!--<item>@string/help_contact_support_descr_connect</item>-->
+
+    <string name="help_contact_support_descr_not_working">&lt;h5>Try troubleshooting using the steps below:&lt;/h5>&lt;ul>&lt;li>Kill the Highlanders App on your device;&lt;/li>&lt;li>Verify your email address by checking your Inbox for an email with subject \"Highlanders email verification\";&lt;/li>&lt;li>Relaunch Highlanders;&lt;/li>&lt;li>If the App is still not working try deleting the App from your device and re-install from the store (your data won\'t be lost).&lt;/li>&lt;/ul>&lt;h5>If the problem still persists please send us the following information in the box below:&lt;/h5>&lt;ul>&lt;li>Your UserID (the email address you\'ve signed up);&lt;/li>&lt;li>Your device brand and version;&lt;/li>&lt;li>A description of the issue with enough details for us to recreate the error.&lt;/li>&lt;/ul></string>
+    <string name="help_contact_support_descr_access">&lt;h5>Please make sure you did verify your email on the device you are trying to use to access Highlanders and you are not accessing Highlanders with more than 5 different devices:&lt;/h5>&lt;ul>&lt;li>Kill the Highlanders App on your device;&lt;/li>&lt;li>Verify your email address by checking your Inbox for an email with subject \"Highlanders email verification\";&lt;/li>&lt;li>Relaunch Highlanders.&lt;/li>&lt;/ul>&lt;h5>If the problem still persists please send us the following information in the box below:&lt;/h5>&lt;ul>&lt;li>Your UserID (the email address you\'ve signed up);&lt;/li>&lt;li>Your device brand and version;&lt;/li>&lt;li>A description of the issue with enough details for us to recreate the error.&lt;/li>&lt;/ul></string>
+    <string name="help_contact_support_descr_connect">&lt;h5>Try troubleshooting using the steps below:&lt;/h5>&lt;ul>&lt;li>Kill the Highlanders App on your device;&lt;/li>&lt;li>Verify your email address by checking your Inbox for an email with subject \"Highlanders email verification\";&lt;/li>&lt;li>Relaunch Highlanders;&lt;/li>&lt;li>Access to Settings &gt; Connected Accounts;&lt;/li>&lt;li>Re-enter your credentials to access the external account you\'d like to connect.&lt;/li>&lt;/ul>&lt;h5>If the problem still persists please send us the following information in the box below:&lt;/h5>&lt;ul>&lt;li>Your UserID (the email address you\'ve signed up);&lt;/li>&lt;li>Your device brand and version;&lt;/li>&lt;li>A description of the issue with enough details for us to recreate the error.&lt;/li>&lt;/ul></string>
+    <string name="help_contact_support_descr_interest">&lt;h5>Which Interest Page are you looking for?&lt;/h5>&lt;p>Enter your feedback below:&lt;/p></string>
+    <string name="help_contact_support_descr_feedback">&lt;h5>We\'re always listening for ideas and requests for new features!&lt;/h5>&lt;p>Enter your feedback below:&lt;/p></string>
+    <string name="help_contact_support_descr_else">&lt;h5>Please tell us more.&lt;/h5>&lt;p>Enter your feedback below:&lt;/p></string>
+
+    <string name="help_contact_press_text">&lt;p>Highlanders is the solution to the sole problem we as humans consider unsolvable.&lt;/p>&lt;p>Highlanders give people the power to extend their presence forever.&lt;/p>&lt;p>Users may share, love, and comment on their own thoughts and memories, as well as do the same with posts from their Inner Circle and from their followed Interests and also pin their favorite contents for \"future\" use where \"future\" means that \'Wishes\' they have scheduled to be executed out of select triggers will continue to be fulfilled with posts and actions among their Inner Circle or their connected IoT devices, as they wished.&lt;/p>&lt;p>For more details, contact us via email at &lt;a href=\"mailto:info@highlande.rs\"> info@highlande.rs&lt;/a>.&lt;/p>&lt;p>&lt;strong>Glossary and branding&lt;/strong>&lt;/p>&lt;ul>&lt;li>If you\'re writing about us, please refer to us as Highlanders — not \"Highlander\".&lt;/li>&lt;li>Our app, available in the iTunes Store and Google Play, is named \"Highlanders\".&lt;/li>&lt;li>Our tagline is \"Live forever, Love forever.\"&lt;/li>&lt;li>Our brand\'s primary colors are Orange: R242 G111 B33 (#F26F21) and Gray: R98 G99 B102 (#626366).&lt;/li>&lt;/ul></string>
+    <string name="help_contact_joinus_text">&lt;p>We are based in Midtown Manhattan, New York.&lt;/p>&lt;p>As we continue to grow, we are always looking for exceptional talents and bright minds.&lt;/p>&lt;p>To know more about our full-time or internship opportunities, write us an email to &lt;a href=\"mailto:info@highlande.rs\"> info@highlande.rs&lt;/a>.&lt;/p></string>
+
+
+    <!-- TODO    length == 5 instead of 6 because CONNECT section not available -->
+    <string-array name="help_contact_item_ids">
+        <item>support_0</item>
+        <item>support_1</item>
+        <item>support_2</item>
+        <item>support_3</item>
+        <item>support_4</item>
+    </string-array>
+
+
+
+    <string-array name="profile_more_gender">
+        <item>@string/profile_more_gender_m</item>
+        <item>@string/profile_more_gender_f</item>
+    </string-array>
+
+    <string name="profile_more_gender_m">Male</string>
+    <string name="profile_more_gender_f">Female</string>
+
+
+    <string-array name="profile_more_interestedin">
+        <item>@string/profile_more_interestedin_m</item>
+        <item>@string/profile_more_interestedin_w</item>
+    </string-array>
+
+    <string name="profile_more_interestedin_m">Men</string>
+    <string name="profile_more_interestedin_w">Women</string>
+
+</resources>

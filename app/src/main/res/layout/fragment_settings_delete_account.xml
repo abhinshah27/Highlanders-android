@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_margin_lg"
+        android:textSize="20sp"
+        android:gravity="start"
+        android:fontFamily="@font/open_sans"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorAccent"
+        android:text="@string/settings_security_delete_account"/>
+
+    <TextView
+        android:id="@+id/btn_delete_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/open_sans_semibold"
+        android:includeFontPadding="false"
+        android:textColor="@color/white"
+        android:text="@string/action_delete_account"
+        android:background="@drawable/selector_delete_account"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_above="@id/btn_delete_account"
+        style="@style/ScrollbarStyle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_margin_lg">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_margin"
+                android:textSize="16sp"
+                android:gravity="start"
+                android:fontFamily="@font/open_sans"
+                android:includeFontPadding="false"
+                android:textColor="@color/black_87"
+                android:text="@string/delete_account_et_txt"
+                />
+
+            <androidx.emoji.widget.EmojiAppCompatEditText
+                android:id="@+id/reason_message"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="@dimen/activity_margin_lg"
+                android:background="@drawable/shape_rectangle_rounded_border"
+                android:fontFamily="@font/open_sans"
+                android:gravity="top"
+                android:hint="@string/action_email_message"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="12dp"
+                android:textColor="@color/black_87"
+                android:textColorHint="@color/black_38"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:gravity="start"
+                android:fontFamily="@font/open_sans_semibold"
+                android:includeFontPadding="false"
+                android:textColor="@color/black_87"
+                android:text="@string/delete_account_sure"
+                />
+
+            <include layout="@layout/layout_custom_checkbox_delete_account"
+                     android:id="@+id/checkbox_sure"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="@dimen/activity_margin_lg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:gravity="start"
+                android:fontFamily="@font/open_sans_semibold"
+                android:includeFontPadding="false"
+                android:textAllCaps="true"
+                android:textColor="@color/black_87"
+                android:text="@string/delete_account_hearts"
+                />
+
+            <include layout="@layout/layout_custom_checkbox_delete_account"
+                     android:id="@+id/checkbox_hearts"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

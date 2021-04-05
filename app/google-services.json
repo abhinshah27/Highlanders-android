@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "105789483440",
+    "firebase_url": "https://highlandersnative.firebaseio.com",
+    "project_id": "highlandersnative",
+    "storage_bucket": "highlandersnative.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105789483440:android:4fda7f4fcef3a756",
+        "android_client_info": {
+          "package_name": "us.highlanders.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105789483440-0cvjmm2gmqa8frpqr5brr7lhjj3r0pc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPYw6NNSAaVcrxDEB20bfb29U6iKDk0ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105789483440-0cvjmm2gmqa8frpqr5brr7lhjj3r0pc2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105789483440:android:1a5d8aac62529ba0",
+        "android_client_info": {
+          "package_name": "us.highlanders.app.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105789483440-0cvjmm2gmqa8frpqr5brr7lhjj3r0pc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZrJ2vCumju3l2FE-mjShW3AyAg9ddNAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105789483440-0cvjmm2gmqa8frpqr5brr7lhjj3r0pc2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

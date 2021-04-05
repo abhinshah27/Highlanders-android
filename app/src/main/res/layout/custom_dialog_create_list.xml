@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/dialog_flag_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginBottom="20dp"
+        android:text="@string/create_list_title"
+        android:textColor="@color/black_87"
+        android:textSize="22sp"
+        android:fontFamily="@font/open_sans_bold"/>
+
+    <androidx.emoji.widget.EmojiAppCompatEditText
+        android:id="@+id/create_list_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textCursorDrawable="@drawable/custom_cursor_drawable"
+        android:hint="@string/dialog_create_list_hint"
+        android:textColor="@color/black_87"
+        android:textSize="18sp"
+        android:fontFamily="@font/open_sans"/>
+
+    <include layout="@layout/generic_dialog_section_buttons"/>
+
+</LinearLayout>

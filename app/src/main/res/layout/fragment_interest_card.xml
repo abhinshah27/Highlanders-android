@@ -1,0 +1,113 @@
+<!--
+  Copyright (c) 2018. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:application="rs.highlande.highlanders_app.activities_and_fragments.activities_home.profile.ProfileFragment"
+             android:background="@color/divider_on_white">
+
+    <ImageView
+        android:id="@+id/profile_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <!-- BLACK ALPHA LAYER -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_10"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/hl_toolbar_transp_home_profile"
+                 android:id="@+id/toolbar_1"
+                 android:layout_width="match_parent"
+                 android:layout_height="?android:actionBarSize"
+                 android:layout_alignParentTop="true"
+                 android:fitsSystemWindows="true"
+                 android:visibility="visible"/>
+
+        <include layout="@layout/hl_toolbar_transp_home_profile_others"
+                 android:id="@+id/toolbar_2"
+                 android:layout_width="match_parent"
+                 android:layout_height="?android:actionBarSize"
+                 android:layout_alignParentTop="true"
+                 android:fitsSystemWindows="true"
+                 android:visibility="gone"/>
+
+        <include layout="@layout/hl_bottom_bar_transp"
+                 android:id="@+id/bottom_bar"
+                 android:layout_width="match_parent"
+                 android:layout_height="48dp"
+                 android:layout_gravity="bottom"
+                 android:layout_alignParentBottom="true"
+                 android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/screen_selection_me_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottom_bar"
+            android:layout_gravity="bottom"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/me_friend_diary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_weight=".33333333333333333"
+                android:textColor="@color/white"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/profile_diary_friend"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/me_friend_inner_C"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_weight=".33333333333333333"
+                android:textColor="@color/white"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/interest_followers"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/me_friend_inner_interests"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_weight=".33333333333333333"
+                android:textColor="@color/white"
+                android:fontFamily="@font/open_sans_bold"
+                tools:text="@string/interest_initiatives"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <include layout="@layout/custom_card_interest"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginTop="@dimen/toolbar_height_lg"
+                 android:layout_below="@id/toolbar_2"
+                 android:layout_above="@id/screen_selection_me_friend"
+                 android:layout_marginStart="24dp"
+                 android:layout_marginEnd="24dp"
+            />
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<resources>
+    <plurals name="plural_hearts_lc">
+        <item quantity="one">@string/heart_s_lc</item>
+        <item quantity="other">@string/heart_p_lc</item>
+    </plurals>
+
+    <string name="heart_s_lc">%d heart</string>
+    <string name="heart_p_lc">%d hearts</string>
+
+
+    <plurals name="plural_hearts_uc">
+        <item quantity="one">@string/heart_s_uc</item>
+        <item quantity="other">@string/heart_p_uc</item>
+    </plurals>
+
+    <string name="heart_s_uc">%d Heart</string>
+    <string name="heart_p_uc">%d Hearts</string>
+
+
+    <plurals name="post_interaction_confirm_hearts">
+        <item quantity="one">@string/post_interaction_confirm_heart</item>
+        <item quantity="other">@string/post_interaction_confirm_hearts</item>
+    </plurals>
+
+
+    <plurals name="plural_interest_followers">
+        <item quantity="one">@string/interest_follower_s</item>
+        <item quantity="other">@string/interest_follower_p</item>
+    </plurals>
+
+    <string name="interest_follower_s">%d follower</string>
+    <string name="interest_follower_p">%d followers</string>
+    <string name="interest_follower_k">%dk followers</string>
+
+
+    <plurals name="plural_wish_repetitions">
+        <item quantity="one">@string/wish_repetitions_s</item>
+        <item quantity="other">@string/wish_repetitions_p</item>
+    </plurals>
+
+    <string name="wish_repetitions_s">%d time</string>
+    <string name="wish_repetitions_p">%d times</string>
+
+
+    <string name="notification_minute">%d minute ago.</string>
+    <string name="notification_minutes">%d minutes ago.</string>
+    <string name="notification_hour">%d hour ago.</string>
+    <string name="notification_hours">%d hours ago.</string>
+    <string name="notification_day">%d day ago.</string>
+    <string name="notification_days">%d days ago.</string>
+    <string name="notification_week">%d week ago.</string>
+    <string name="notification_weeks">%d weeks ago.</string>
+    <string name="notification_month">%d month ago.</string>
+    <string name="notification_months">%d months ago.</string>
+    <string name="notification_year">%d year ago.</string>
+    <string name="notification_years">%d years ago.</string>
+
+    <plurals name="notification_minutes">
+        <item quantity="one">@string/notification_minute</item>
+        <item quantity="other">@string/notification_minutes</item>
+    </plurals>
+
+    <plurals name="notification_hours">
+        <item quantity="one">@string/notification_hour</item>
+        <item quantity="other">@string/notification_hours</item>
+    </plurals>
+
+    <plurals name="notification_days">
+        <item quantity="one">@string/notification_day</item>
+        <item quantity="other">@string/notification_days</item>
+    </plurals>
+
+    <plurals name="notification_weeks">
+        <item quantity="one">@string/notification_week</item>
+        <item quantity="other">@string/notification_weeks</item>
+    </plurals>
+
+    <plurals name="notification_months">
+        <item quantity="one">@string/notification_month</item>
+        <item quantity="other">@string/notification_months</item>
+    </plurals>
+
+    <plurals name="notification_years">
+        <item quantity="one">@string/notification_year</item>
+        <item quantity="other">@string/notification_years</item>
+    </plurals>
+
+
+    <string name="inactivity_hour">%d Hour</string>
+    <string name="inactivity_hours">%d Hours</string>
+    <string name="inactivity_day">%d Day</string>
+    <string name="inactivity_days">%d Days</string>
+    <string name="inactivity_week">%d Week</string>
+    <string name="inactivity_weeks">%d Weeks</string>
+    <string name="inactivity_month">%d Month</string>
+    <string name="inactivity_months">%d Months</string>
+    <string name="inactivity_year">%d Year</string>
+    <string name="inactivity_years">%d Years</string>
+
+    <plurals name="inactivity_hours">
+        <item quantity="one">@string/inactivity_hour</item>
+        <item quantity="other">@string/inactivity_hours</item>
+    </plurals>
+
+    <plurals name="inactivity_days">
+        <item quantity="one">@string/inactivity_day</item>
+        <item quantity="other">@string/inactivity_days</item>
+    </plurals>
+
+    <plurals name="inactivity_weeks">
+        <item quantity="one">@string/inactivity_week</item>
+        <item quantity="other">@string/inactivity_weeks</item>
+    </plurals>
+
+    <plurals name="inactivity_months">
+        <item quantity="one">@string/inactivity_month</item>
+        <item quantity="other">@string/inactivity_months</item>
+    </plurals>
+
+    <plurals name="inactivity_years">
+        <item quantity="one">@string/inactivity_year</item>
+        <item quantity="other">@string/inactivity_years</item>
+    </plurals>
+
+    <string name="initiative_day">%d day</string>
+    <string name="initiative_days">%d days</string>
+    <plurals name="initiative_days">
+        <item quantity="one">@string/initiative_day</item>
+        <item quantity="other">@string/initiative_days</item>
+    </plurals>
+
+</resources>

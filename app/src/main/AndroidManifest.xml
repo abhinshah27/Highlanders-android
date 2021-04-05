@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="rs.highlande.highlanders_app">
+
+    <!-- [START] NORMAL PERMISSIONS ============================================================ -->
+
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Allows not to show a notification when downloading a file -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <!-- Voice and Video calls permissions -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!-- [END] NORMAL PERMISSIONS ============================================================== -->
+
+
+    <!-- [START] DANGEROUS PERMISSIONS ========================================================= -->
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- [END] DANGEROUS PERMISSIONS =========================================================== -->
+
+
+    <!-- FEATURES -->
+    <uses-feature android:name="android.hardware.camera.any"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+    <!-- Tell the system this app requires OpenGL ES 2.0. -->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
+    <!-- SUPPORTS -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="false"/>
+    <!--
+     "allowBackup" set to false because it prevented the Realm file to be deleted,
+         thus creating inconsistencies and unforeseen behaviors with the GUEST mode
+    -->
+    <application
+        android:name=".base.HLApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:allowBackup,android:theme">
+
+        <!-- Library needed because targeting API 28 and using Maps SDK -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <!-- FONTS -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts"/>
+
+        <!-- SERVICES AND RECEIVERS -->
+        <service
+            android:name=".services.GetTimelineService"
+            android:exported="false"/>
+        <service
+            android:name=".services.SubscribeToSocketService"
+            android:exported="false"/>
+        <service
+            android:name=".services.SubscribeToSocketServiceChat"
+            android:exported="false"/>
+        <service
+            android:name=".services.SendFCMTokenService"
+            android:exported="false"/>
+        <service
+            android:name=".services.GetIdentitiesService"
+            android:exported="false"/>
+        <service
+            android:name=".services.FetchingOperationsService"
+            android:exported="false"/>
+        <service
+            android:name=".services.GetConfigurationDataService"
+            android:exported="false"/>
+        <service
+            android:name=".services.DeleteTempFileService"
+            android:exported="false"/>
+        <service
+            android:name=".services.HandlePushedDataService"
+            android:exported="false"/>
+        <service
+            android:name=".services.HandleChatsUpdateService"
+            android:exported="false"/>
+        <service
+            android:name=".services.HandleUnsentMessagesService"
+            android:exported="false"/>
+        <service
+            android:name=".voiceVideoCalls.tmp.CallsService"
+            android:exported="false"/>
+        <service
+            android:name=".services.HandleChatCreationService"
+            android:exported="false"/>
+
+        <receiver
+            android:name=".websocket_connection.ServerMessageReceiver"
+            android:exported="false"/>
+        <!-- <receiver android:name=".websocket_connection.RealTimeCommunicationReceiver" -->
+        <!-- android:exported="false"/> -->
+        <receiver
+            android:name=".websocket_connection.ConnectionChangeReceiver"
+            android:exported="false"/>
+        <receiver
+            android:name=".websocket_connection.ScreenStateReceiver"
+            android:exported="false"/>
+
+        <service android:name=".notifications.FCMMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+        <!--
+        Set custom default icon. This is used when no icon is set for incoming notification messages.
+        See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification_tray"/>
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent"/>
+
+        <!-- Set default notification channel -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/notif_channel_default_description"/>
+
+        <!-- FABRIC -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4be7bbd3ae8a59362e4991823037facb5cd5d303"/>
+
+        <!-- FILE PROVIDER -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- The API key for Google Maps-based APIs. -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+
+        <!-- ///////////// -->
+        <!-- ACTIVITIES -->
+        <!-- ///////////// -->
+
+
+        <!-- SPLASH -->
+        <activity
+            android:name=".activities_and_fragments.SplashActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- LOGIN -->
+        <activity
+            android:name=".activities_and_fragments.activities_login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden">
+            <intent-filter>
+                <data android:scheme="highlanders"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities_and_fragments.activities_login.SignupConfirmActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity
+            android:name=".activities_and_fragments.activities_login.ResetPasswordActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+
+        <!-- SELECT IDENTITY -->
+        <activity
+            android:name=".activities_and_fragments.SelectIdentityActivity"
+            android:label="@string/title_activity_select_identity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- HOME -->
+        <!-- TODO   RETURN HERE FOR LANDSCAPE -->
+        <activity
+            android:name=".activities_and_fragments.activities_home.HomeActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_home"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- TODO   RETURN HERE FOR LANDSCAPE -->
+        <activity
+            android:name=".activities_and_fragments.activities_home.timeline.LandscapeMediaActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activities_and_fragments.activities_home.timeline.PostOverlayActionActivity"
+            android:theme="@style/TransparentInteractionTheme"
+            android:windowSoftInputMode="adjustResize"/>
+        <!--android:screenOrientation="portrait"-->
+        <activity
+            android:name=".activities_and_fragments.activities_home.timeline.InteractionsViewerActivity"
+            android:theme="@style/TransparentInteractionTheme"/>
+        <!--android:screenOrientation="portrait"-->
+        <activity
+            android:name=".activities_and_fragments.activities_create_post.CreatePostActivityMod"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activities_and_fragments.activities_create_post.PostVisibilityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activities_and_fragments.activities_create_post.CreatePostPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- VIEWERs -->
+        <activity
+            android:name=".activities_and_fragments.activities_home.PhotoViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViewersTheme"/>
+        <activity
+            android:name=".activities_and_fragments.activities_home.VideoViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViewersTheme"/>
+        <activity
+            android:name=".activities_and_fragments.activities_home.VideoViewActivityExo"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViewersTheme"/>
+        <activity
+            android:name=".activities_and_fragments.activities_home.VideoViewActivityExoAuto"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViewersTheme"/>
+        <activity
+            android:name=".activities_and_fragments.activities_home.TextViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- PROFILE -->
+        <activity
+            android:name=".activities_and_fragments.activities_home.profile.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activities_and_fragments.activities_home.profile.SinglePostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- WISHES -->
+        <activity
+            android:name=".activities_and_fragments.activities_home.wishes.WishesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activities_and_fragments.activities_home.wishes.PostPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentPostSelectionTheme"/>
+        <activity
+            android:name=".activities_and_fragments.LegacyContactSelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activities_and_fragments.activities_home.wishes.SavedWishesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activities_and_fragments.activities_home.wishes.WishesAccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- SETTINGS -->
+        <activity
+            android:name=".activities_and_fragments.activities_home.settings.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!-- USER GUIDE -->
+        <activity
+            android:name=".activities_and_fragments.activities_user_guide.UserGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- VIEW TAGS -->
+        <activity
+            android:name=".activities_and_fragments.ViewAllTagsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- GLOBAL SEARCH -->
+        <activity
+            android:name=".activities_and_fragments.activities_home.global_search.GlobalSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- WEBVIEWs -->
+        <activity
+            android:name=".activities_and_fragments.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".activities_and_fragments.WebViewActivityDocuments"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+        <!-- LANGUAGES SELECTION -->
+        <activity
+            android:name=".activities_and_fragments.SelectLanguageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+
+
+        <!-- CHAT -->
+        <activity
+            android:name=".activities_and_fragments.activities_chat.ChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme"/>
+
+        <!-- CALLS -->
+        <activity
+            android:name=".voiceVideoCalls.tmp.CallsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/ViewersTheme"/>
+        <activity
+            android:name=".voiceVideoCalls.CallsActivityNoService"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/ViewersTheme"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+
+    <include layout="@layout/hl_toolbar_transp_btp"
+             android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/focus_catcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:descendantFocusability="beforeDescendants"
+        android:orientation="horizontal"/>
+
+    <include layout="@layout/profile_search_box"
+             android:id="@+id/search_box"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:baselineAligned="false"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        >
+
+        <FrameLayout
+            android:id="@+id/profile_tab_inner_circle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_weight=".5">
+
+            <TextView
+                android:id="@+id/tab_ic_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/inner_circle"
+                android:textSize="18sp"
+                android:textColor="@color/state_list_custom_tab"
+                android:background="@drawable/background_custom_tab"
+                android:fontFamily="@font/open_sans"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/profile_tab_contacts"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_weight=".5"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tab_contacts_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/contacts"
+                android:textSize="18sp"
+                android:fontFamily="@font/open_sans"
+                android:textColor="@color/state_list_custom_tab"
+                android:background="@drawable/background_custom_tab"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/inner_circle_pages_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/inner_circle_page_ic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/ScrollbarStyle"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/no_result"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="30dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_26"
+            android:fontFamily="@font/open_sans"
+            android:textSize="14sp"
+            android:text="@string/no_people_in_ic"
+            />
+
+        <FrameLayout
+            android:id="@+id/inner_circle_page_contacts_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/inner_circle_page_contacts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ScrollbarStyle"/>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <include layout="@layout/custom_generic_progress_indicator"
+                     android:id="@+id/progress_contacts"/>
+
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

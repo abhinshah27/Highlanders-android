@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (c) 2017. Highlanders LLC - All Rights Reserved
+  Unauthorized copying of this file, via any medium is strictly prohibited.
+  Proprietary and confidential.
+  -->
+
+<androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lower_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="110dp"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/activity_margin_lg"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <include layout="@layout/name_and_hearts_section"
+                android:id="@+id/name_hearts_layout"/>
+
+            <LinearLayout
+                android:id="@+id/layout_hideable_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        card_view:srcCompat="@drawable/ic_given_hearts_black"/>
+
+                    <TextView
+                        android:id="@+id/count_heart_given"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="-2dp"
+                        android:fontFamily="@font/open_sans"
+                        android:textSize="16sp"
+                        tools:text="3564 given"
+                        android:textColor="@color/black_87"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        card_view:srcCompat="@drawable/ic_receive_hearts_black"/>
+
+                    <TextView
+                        android:id="@+id/count_heart_received"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="-2dp"
+                        android:fontFamily="@font/open_sans"
+                        android:textSize="16sp"
+                        tools:text="3564 received"
+                        android:textColor="@color/black_87"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/lower_section"
+            android:background="@drawable/background_rounded_2_top">
+
+            <ImageView
+                android:id="@+id/wall_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/background_rounded_2_top"
+                />
+
+            <include layout="@layout/custom_layout_profile_picture"
+                     android:id="@+id/profile_picture"
+                     android:layout_width="120dp"
+                     android:layout_height="120dp"
+                     android:layout_gravity="center"/>
+        </FrameLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
